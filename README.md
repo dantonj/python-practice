@@ -31,6 +31,33 @@ A program that accepts a business name, revenue, and expenses, then calculates p
 
 [View Monthly Business Analyzer](./practice5.py)
 
+### Lecture 1 - Conditionals
+
+**Project: Business Transaction Classifier**
+
+A program that accepts a transaction description, amount, and type, then classifies the transaction based on its size and validates its type.
+
+**Features:**
+
+- Accepts a transaction description, amount, and type.
+- Classifies transactions as small, medium, or large.
+- Validates transaction types (income or expense).
+- Rejects invalid transaction types.
+- Displays formatted transaction information.
+
+**Concepts practiced:**
+
+- Conditional statements&#x20;
+- Comparison operators
+- Boolean expressions&#x20;
+- Logical operators&#x20;
+- Functions and return values
+- Input validation
+- String methods (
+- Formatted strings
+
+[View Business Transaction Classifier](./practice7.py)
+
 ## Learning Goals
 
 - Develop a strong foundation in Python.

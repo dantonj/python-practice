@@ -1,0 +1,27 @@
+def classify(amount):
+    if amount <= 0:
+        return "Invalid amount."
+    elif amount >= 1 and amount <= 100:
+        return "Small transaction."
+    elif amount > 100 and amount <= 1000:
+        return "Medium transaction."
+    else:
+        return ("Large transaction.")
+
+def validate(t_type):
+    if t_type != "income" and t_type != "expense":
+        return False
+    return True
+
+desc = input("Enter a transaction description: ")
+amount = float(input("Enter the transaction amount: "))
+t_type = input("Enter the transaction type (income/expense): ").lower()
+
+if not validate(t_type):
+    print("Invalid transaction type. Please enter 'income' or 'expense'.")
+else:
+    transaction_size = classify(amount)
+    print(f"Transaction Description: {desc}")
+    print(f"Transaction Amount: ${amount:,.2f}")
+    print(f"Transaction Type: {t_type.capitalize()}")
+    print(f"Transaction Size: {transaction_size}")

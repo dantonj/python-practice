@@ -56,7 +56,7 @@ A program that accepts a transaction description, amount, and type, then classif
 - String methods (
 - Formatted strings
 
-[View Business Transaction Classifier](./practice7.py)
+[View Business Transaction Classifier](./lecture%201)
 
 ## Learning Goals
 

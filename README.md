@@ -68,7 +68,7 @@ A program that accepts a transaction description, amount, and type, then classif
 ## Progress
 
 - [x] Lecture 0 – Functions, Variables
-- [ ] Lecture 1 – Conditionals
+- [x] Lecture 1 – Conditionals
 - [ ] Lecture 2 – Loops
 - [ ] Lecture 3 – Exceptions
 - [ ] Lecture 4 – Libraries

@@ -58,6 +58,33 @@ A program that accepts a transaction description, amount, and type, then classif
 
 [View Business Transaction Classifier](./lecture%201)
 
+### Lecture 2 - Loops
+
+**Project: Business Expense Analyzer**
+
+A program that collects multiple business expenses, then calculates the total and average expenses.
+
+**Features:**
+
+- Collects multiple expense entries.
+- Stops collecting expenses when the user enters 0.
+- Calculates total expenses.
+- Counts the number of expenses entered.
+- Calculates the average expense.
+- Handles cases where no expenses are entered.
+
+**Concepts practiced:**
+
+- Loops (`while` and `for`)
+- Lists and `range()`
+- `break` and `continue`
+- Nested loops
+- Augmented assignment operators (`+=`)
+- Conditional statements
+- Running totals and counters
+
+[View Business Expense Analyzer](https://github.com/dantonj/python-practice/blob/main/lecture%202)
+
 ## Learning Goals
 
 - Develop a strong foundation in Python.
@@ -69,7 +96,7 @@ A program that accepts a transaction description, amount, and type, then classif
 
 - [x] Lecture 0 – Functions, Variables
 - [x] Lecture 1 – Conditionals
-- [ ] Lecture 2 – Loops
+- [x] Lecture 2 – Loops
 - [ ] Lecture 3 – Exceptions
 - [ ] Lecture 4 – Libraries
 - [ ] Lecture 5 – Unit Tests

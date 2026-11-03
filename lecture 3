@@ -1,0 +1,80 @@
+trans = 0
+
+def business():
+    while True:
+        business_name = input("Enter your business name: ")
+        if business_name.strip() == "":
+            print("Business name cannot be empty. Please enter a valid business name.")
+            continue
+        else:
+            break
+    return business_name
+
+def desc():
+    while True:
+        transaction_desc = input("Enter a transaction description: ")
+        if transaction_desc.strip() == "":
+            print("Transaction description cannot be empty. Please enter a valid transaction description.")
+            continue
+        else:
+            break
+    return transaction_desc
+
+def xtype():
+    while True:
+        transaction_type = input("Enter the transaction type (income/expense): ").lower().strip()
+        if transaction_type != "income" and transaction_type != "expense":
+            print("Invalid transaction type. Please enter income or expense.")
+            continue
+        else:
+            break
+    return transaction_type
+
+def amount():
+    while True:
+        try:
+            transaction_amount = float(input("Enter the transaction amount: "))
+        except ValueError:
+            print("Invalid input. Please enter a valid transaction amount.")
+            continue
+        if transaction_amount <= 0:
+            print("Transaction amount must be greater than zero.")
+            continue
+        else:
+            break
+    return transaction_amount
+
+def main():
+    global trans
+    
+    while True:
+        transaction_desc = desc()
+        transaction_type = xtype()
+        transaction_amount = amount()
+        trans += 1
+
+        print("Transaction recorded successfully!")
+
+        print("Transaction Details:")
+        print(f"Transaction Description: {transaction_desc}")
+        print(f"Transaction Type: {transaction_type.capitalize()}")
+        print(f"Transaction Amount: ${transaction_amount:,.2f}")
+
+        while True:
+            another_transaction = input("Do you want to record another transaction? (yes/no): ").lower().strip()
+          
+            if another_transaction == "yes":
+                break
+            elif another_transaction == "no":
+                return
+            else:
+                print("Invalid response. Please enter yes or no.")
+
+print("Welcome to Guldata's Transaction Recorder!")
+
+business_name = business()
+print(f"Business Name: {business_name}")
+main()
+print(f"Total transactions recorded: {trans}")
+
+print("Thank you for using Guldata's Transaction Recorder!")

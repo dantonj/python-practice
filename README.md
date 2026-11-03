@@ -85,6 +85,35 @@ A program that collects multiple business expenses, then calculates the total an
 
 [View Business Expense Analyzer](https://github.com/dantonj/python-practice/blob/main/lecture%202)
 
+### Lecture 3 - Exceptions
+
+**Project: Transaction Recorder**
+
+A program that collects business transaction information, validates user input, and records multiple transactions while handling invalid entries.
+
+**Features:**
+
+- Accepts a business name.
+- Collects transaction descriptions, amounts, and types.
+- Validates user input.
+- Handles invalid numerical input using exception handling.
+- Allows users to record multiple transactions.
+- Tracks the total number of transactions recorded.
+
+**Concepts practiced:**
+
+- Exception handling
+- try and except
+- ValueError
+- while loops
+- Conditional statements
+- Functions and return values
+- Input validation
+- Global variables
+- Formatted strings
+
+[View Transaction Recorder](./Lecture%203)
+
 ## Learning Goals
 
 - Develop a strong foundation in Python.

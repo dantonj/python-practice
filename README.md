@@ -126,7 +126,7 @@ A program that collects business transaction information, validates user input, 
 - [x] Lecture 0 – Functions, Variables
 - [x] Lecture 1 – Conditionals
 - [x] Lecture 2 – Loops
-- [ ] Lecture 3 – Exceptions
+- [x] Lecture 3 – Exceptions
 - [ ] Lecture 4 – Libraries
 - [ ] Lecture 5 – Unit Tests
 - [ ] Lecture 6 – File I/O

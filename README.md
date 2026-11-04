@@ -112,7 +112,7 @@ A program that collects business transaction information, validates user input, 
 - Global variables
 - Formatted strings
 
-[View Transaction Recorder](./Lecture%203)
+[View Transaction Recorder](./lecture%203)
 
 ## Learning Goals
 

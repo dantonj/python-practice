@@ -2,7 +2,7 @@
 
 A collection of projects and exercises completed while learning Python through Harvard's CS50P&#x20;
 
-This repository documents my progress as I develop my Python programming skills, with a focus on applying what I learn to business trackr.
+This repository documents my progress as I develop my Python programming skills, with a focus on applying what I learn to a business tracker.
 
 ## CS50P Projects
 

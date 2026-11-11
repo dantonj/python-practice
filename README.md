@@ -1,6 +1,6 @@
 # Python Practice
 
-A collection of projects and exercises completed while learning Python through Harvard's CS50P&#x20;
+A collection of projects and exercises completed while learning Python through Harvard's CS50P.
 
 This repository documents my progress as I develop my Python programming skills, with a focus on applying what I learn to a business tracker.
 
@@ -47,13 +47,13 @@ A program that accepts a transaction description, amount, and type, then classif
 
 **Concepts practiced:**
 
-- Conditional statements&#x20;
+- Conditional statements
 - Comparison operators
-- Boolean expressions&#x20;
-- Logical operators&#x20;
+- Boolean expressions
+- Logical operators
 - Functions and return values
 - Input validation
-- String methods (
+- String methods
 - Formatted strings
 
 [View Business Transaction Classifier](./lecture%201)
@@ -103,9 +103,9 @@ A program that collects business transaction information, validates user input, 
 **Concepts practiced:**
 
 - Exception handling
-- try and except
-- ValueError
-- while loops
+- `try` and `except`
+- `ValueError`
+- `while` loops
 - Conditional statements
 - Functions and return values
 - Input validation
@@ -113,6 +113,38 @@ A program that collects business transaction information, validates user input, 
 - Formatted strings
 
 [View Transaction Recorder](./lecture%203)
+
+### Lecture 4 - Libraries
+
+**Project: Financial Data Integration & Analyzer**
+
+A command-line currency converter that retrieves exchange-rate data from the Frankfurter API and calculates conversions based on user-provided currencies and amounts.
+
+**Features:**
+
+- Accepts source currency, target currency, and amount through command-line arguments.
+- Retrieves exchange-rate data from an external API.
+- Parses JSON responses and extracts exchange rates.
+- Calculates converted currency amounts.
+- Validates command-line arguments and numerical input.
+- Handles request failures, invalid responses, and missing exchange rates.
+- Displays a formatted currency conversion report.
+
+**Concepts practiced:**
+
+- External libraries (`requests` and `sys`)
+- API requests using `requests.get()`
+- Query parameters
+- JSON parsing
+- Dictionaries and nested data access
+- Command-line arguments (`sys.argv`)
+- HTTP status codes and `raise_for_status()`
+- Exception handling
+- Functions and return values
+- Program organization using `main()`
+- Python entry-point convention (`if __name__ == "__main__"`)
+
+[View Financial Data Integration & Analyzer](./lecture%204)
 
 ## Learning Goals
 
@@ -127,7 +159,7 @@ A program that collects business transaction information, validates user input, 
 - [x] Lecture 1 – Conditionals
 - [x] Lecture 2 – Loops
 - [x] Lecture 3 – Exceptions
-- [ ] Lecture 4 – Libraries
+- [x] Lecture 4 – Libraries
 - [ ] Lecture 5 – Unit Tests
 - [ ] Lecture 6 – File I/O
 - [ ] Lecture 7 – Regular Expressions

@@ -1,0 +1,61 @@
+import requests
+import sys
+
+url = 'https://api.frankfurter.app/latest'
+
+if len(sys.argv) != 4:
+    print("Error: Please provide the from currency, to currency, and amount as command-line arguments.")
+    sys.exit(1)
+
+try:
+    from_currency = sys.argv[1]
+    to_currency = sys.argv[2]
+    amount = float(sys.argv[3])
+    if amount <= 0:
+        print("Error: Amount must be a positive number.")
+        sys.exit(1)
+except ValueError:
+    print("Error: Invalid amount. Please provide a numeric value for the amount.")
+    sys.exit(1)
+
+def get_exchange_rate(from_currency, to_currency):
+    params = {
+        'from': from_currency,
+        'to': to_currency,
+    }
+
+    try:
+        response = requests.get(url, params=params, timeout=10)
+        response.raise_for_status()
+    except requests.exceptions.RequestException as e:
+        print(f"Error: Failed to fetch exchange rate data. {e}")
+        sys.exit(1)
+
+    try:
+        data = response.json()
+    except ValueError:
+        print("Error: Failed to parse exchange rate data.")
+        sys.exit(1)
+
+    try:
+        return data['rates'][to_currency]
+    except KeyError:
+        print(f"Error: Exchange rate for {to_currency} not found.")
+        sys.exit(1)
+
+def convert_currency(amount, exchange_rate):
+    return amount * exchange_rate
+
+def main():
+    exchange_rate = get_exchange_rate(from_currency, to_currency)
+    converted_amount = convert_currency(amount, exchange_rate)
+    print("Currency Conversion Report")
+    print("--------------------------")
+
+    print(f"Original Amount: {amount:,.2f} {from_currency}")
+    print(f"Exchange Rate: {exchange_rate:.4f} {to_currency} per {from_currency}")
+    print(f"Converted Amount: {converted_amount:,.2f} {to_currency}")
+
+if __name__ == "__main__":
+    main()
+

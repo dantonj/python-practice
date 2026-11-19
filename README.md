@@ -146,6 +146,35 @@ A command-line currency converter that retrieves exchange-rate data from the Fra
 
 [View Financial Data Integration & Analyzer](./lecture%204)
 
+### Lecture 5 - Unit Tests
+
+**Project: Business Profit & Margin Calculator Testing**
+
+A project that uses pytest to test financial calculation functions. The program calculates business profit and profit margins, while a separate test file verifies the accuracy of these calculations across different scenarios, including profits, losses, break-even situations, and zero revenue.
+
+**Features:**
+
+- Calculates business profit using revenue and expenses.
+- Calculates profit margins as a percentage.
+- Handles zero revenue to prevent division errors.
+- Tests profit calculations across multiple scenarios.
+- Tests profit margins with positive, negative, and zero values.
+- Uses assertions to verify expected results.
+
+**Concepts practiced:**
+
+- Unit testing
+- pytest
+- Assertions (`assert`)
+- Test functions
+- Test cases
+- Edge cases
+- Testing return values
+- Importing functions between Python files
+- Separating program logic from testing logic
+
+[View Calculation Functions](./lecture%205/lecture%205.py) | [View Unit Tests](./lecture%205/lecture%205%20test.py)
+
 ## Learning Goals
 
 - Develop a strong foundation in Python.

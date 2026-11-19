@@ -189,7 +189,7 @@ A project that uses pytest to test financial calculation functions. The program 
 - [x] Lecture 2 – Loops
 - [x] Lecture 3 – Exceptions
 - [x] Lecture 4 – Libraries
-- [ ] Lecture 5 – Unit Tests
+- [x] Lecture 5 – Unit Tests
 - [ ] Lecture 6 – File I/O
 - [ ] Lecture 7 – Regular Expressions
 - [ ] Lecture 8 – Object-Oriented Programming

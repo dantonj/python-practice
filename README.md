@@ -150,7 +150,7 @@ A command-line currency converter that retrieves exchange-rate data from the Fra
 
 **Project: Business Profit & Margin Calculator Testing**
 
-A project that uses pytest to test financial calculation functions. The program calculates business profit and profit margins, while a separate test file verifies the accuracy of these calculations across different scenarios, including profits, losses, break-even situations, and zero revenue.
+A project that uses pytest to test financial calculation functions. The program calculates business profit and profit margins, while a separate test file verifies the accuracy of these calculations across positive, negative, zero, and break-even scenarios.
 
 **Features:**
 
@@ -173,7 +173,7 @@ A project that uses pytest to test financial calculation functions. The program 
 - Importing functions between Python files
 - Separating program logic from testing logic
 
-[View Calculation Functions](./lecture%205/lecture%205.py) | [View Unit Tests](./lecture%205/lecture%205%20test.py)
+[View Calculation Functions](./lecture%205) | [View Unit Tests](./lecture%205%20test)
 
 ## Learning Goals
 

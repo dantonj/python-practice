@@ -1,0 +1,115 @@
+import csv
+import datetime
+
+income = 0
+expenses = 0
+valid_transactions = []
+valid_count = 0
+invalid_transactions = []
+invalid_count = 0
+
+print("--Welcome to Guldata's CSV processor!!!--")
+
+
+# Opens file
+with open('transactions.csv', 'r') as t:
+    file = csv.reader(t)
+    next(file)
+
+    # Data validation
+    for row_number, line in enumerate(file, start=2):
+        errors = []
+        valid = True
+        
+
+        if len(line) != 5:
+            valid = False
+            invalid_count += 1
+            invalid_transactions.append(line)
+            errors.append("Incorrect number of columns")
+            print(f"Row {row_number} {errors[0]} !!\n")
+            continue
+
+        try:
+            datetime.datetime.strptime(line[0].strip(), '%Y-%m-%d')
+        except (TypeError, ValueError):
+            valid = False
+            errors.append("Invalid date")
+
+        if line[1].strip() == "":
+            valid = False
+            errors.append("Missing description")
+
+        entry_type = line[2].strip().lower()
+        if entry_type not in ('income', 'expense'):
+            valid = False
+            errors.append("Invalid transaction type")
+
+        if line[3].strip() == "":
+            valid = False
+            errors.append("Missing category")
+
+        try:
+            value = float(line[4].strip())
+        except ValueError:
+            valid = False
+            errors.append("Invalid amount")
+        else:
+            if value < 0:
+                valid = False
+                errors.append("Negative amount")
+        
+        if valid:
+            valid_transactions.append(line)
+            valid_count += 1
+        else:
+            invalid_transactions.append(line)
+            invalid_count += 1
+
+            for error in errors:
+                print(f"Row {row_number} {error} !!\n")
+        
+        # Total income/expenses
+        if valid:
+                    if entry_type == 'income':
+                        income += value
+                    else:
+                        expenses += value
+        
+
+with open('new_transactions.csv', 'w', newline='') as n:
+        writer = csv.writer(n)
+        
+        writer.writerow(['date', 'description', 'type', 'category', 'amount'])
+        writer.writerows(valid_transactions)
+
+# Financial summary
+profit = income - expenses
+
+if income != 0:
+    margin = (profit / income) * 100
+else:
+    margin = None
+
+go = input("Analyze?\n").strip().lower()
+
+if go == 'yes':
+    print("-----Summary-----")
+
+    print(f"Total Revenue: ${income:,.2f}")
+    print(f"Total Expenses: ${expenses:,.2f}")
+    print(f"Net Profit: ${profit:,.2f}")
+
+    if margin is not None:
+        print(f"Profit Margin: {margin:,.2f}%")
+    else:
+        print("Profit Margin: N/A")
+
+    print("---Validation report---")
+   
+    print("Valid Transactions ",valid_count,"valid")
+    print("Invalid Transactions ",invalid_count,"rejected")
+   
+    if not invalid_transactions:
+        print("All transactions passed validation!")
+    

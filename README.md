@@ -175,6 +175,39 @@ A project that uses pytest to test financial calculation functions. The program 
 
 [View Calculation Functions](./lecture%205) | [View Unit Tests](./lecture%205%20test)
 
+### Lecture 6 - File I/O
+
+**Project: CSV Validation**
+
+A financial data processor that reads business transactions from a CSV file, validates the data, calculates financial metrics, and exports accepted transactions into a cleaned CSV file.
+
+**Features:**
+
+- Reads transaction data from CSV files.
+- Validates transaction dates, descriptions, types, categories, and amounts.
+- Identifies and reports individual data errors by row number.
+- Separates valid and invalid transactions.
+- Calculates total revenue, expenses, net profit, and profit margin.
+- Exports valid transactions into a new cleaned CSV file.
+- Preserves the original CSV file.
+
+**Concepts practiced:**
+
+- File handling (`open()` and `with`)
+- Reading and writing files
+- CSV processing using the `csv` module
+- CSV readers and writers (`csv.reader()` and `csv.writer()`)
+- Lists and list methods (`append()`)
+- Iteration using `enumerate()`
+- Date validation using `datetime`
+- Data validation
+- Exception handling (`try`, `except`, and `else`)
+- Conditional statements
+- Financial calculations
+- Formatted strings
+
+[View CSV Validation](./lecture%206)
+
 ## Learning Goals
 
 - Develop a strong foundation in Python.
@@ -190,7 +223,7 @@ A project that uses pytest to test financial calculation functions. The program 
 - [x] Lecture 3 – Exceptions
 - [x] Lecture 4 – Libraries
 - [x] Lecture 5 – Unit Tests
-- [ ] Lecture 6 – File I/O
+- [x] Lecture 6 – File I/O
 - [ ] Lecture 7 – Regular Expressions
 - [ ] Lecture 8 – Object-Oriented Programming
 - [ ] Lecture 9 – Et Cetera
